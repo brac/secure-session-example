@@ -1,0 +1,18 @@
+if firstName
+  h1 Welcome back #{firstName} #{lastName}!
+  p I bet your favorite color is #{color}
+  form(action="/clear")
+    input(type="submit" value="Clear my cookie!")
+
+else
+  h1 Welcome Stranger!
+  p Please tell me about yourself.
+  form(method="POST" action="/")
+    .input
+      input(name="firstName" placeholder="First name")
+    .input
+      input(name="lastName" placeholder="Last name")
+    .input
+      input(name="color" placeholder="Favorite Color")
+    .input
+      input(type="submit" value="That's me!")
